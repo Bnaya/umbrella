@@ -52,7 +52,7 @@ export function malloc(allocatorState: AllocatorState, bytes: number) {
         return 0;
     }
 
-    const { u32, state, options } = allocatorState;
+    const { u32, state } = allocatorState;
 
     const paddedSize = align(bytes + SIZEOF_MEM_BLOCK, get_align(state));
     const end = get_end(state);
